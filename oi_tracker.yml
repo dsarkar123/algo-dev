@@ -1,0 +1,31 @@
+default:
+  # Strategy settings
+  strategy_name: "OI_Tracker"
+  
+  # Index and Symbol Configuration
+  index_symbol: "NSE:NIFTY 50"
+  symbol_initials: "NIFTY"
+  exchange: "NFO"
+  
+  # Strike Selection
+  strike_difference: 50
+  strikes_to_track: 5 # ATM, 2 ITM, 2 OTM
+  
+  # Time Intervals for Change Calculation (in minutes)
+  time_intervals: [3, 5, 10, 15, 30, 180]
+  
+  # Color Coding Thresholds (percentage change)
+  color_thresholds:
+    3: 10
+    5: 12
+    10: 15
+    15: 20
+    30: 30
+    180: 100
+    
+  # Alert Configuration
+  alert_threshold_percentage: 30
+  
+  # Data Fetching
+  historical_data_interval: "minute"
+  
